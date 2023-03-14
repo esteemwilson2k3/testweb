@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Đăng đánh giá - Xem phim</title>
+</head>
+
+<body>
+  <h1>Đăng đánh giá bộ phim</h1>
+  <form method="post" action="/review">
+    <label for="movie-title">Tiêu đề bộ phim:</label>
+    <input type="text" id="movie-title" name="movie-title" required>
+    <br>
+    <label for="rating">Đánh giá:</label>
+    <select id="rating" name="rating" required>
+      <option value="5">5 sao</option>
+      <option value="4">4 sao</option>
+      <option value="3">3 sao</option>
+      <option value="2">2 sao</option>
+      <option value="1">1 sao</option>
+    </select>
+    <br>
+    <label for="review-text">Nhận xét:</label>
+    <textarea id="review-text" name="review-text" required></textarea>
+    <br>
+    <input type="submit" value="Gửi">
+  </form>
+</body>
+
+</html>

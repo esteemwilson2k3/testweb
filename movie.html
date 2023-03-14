@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ movie[1] }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ movie[1] }}</h1>
+    <div class="movie">
+        <p>{{ movie[2] }}</p>
+        <p>Đánh giá: {{ movie[3] }}/10</p>
+    </div>
+    <div class="rating">
+        <h2>Đánh giá phim</h2>
+        <form method="POST" action="{{ url_for('rate_movie', id=movie[0]) }}">
+            <input type="number" name="rating" min="0" max="10" required>
+            <input type="submit" value="Đánh giá">
+        </form>
+    </div>
+</body>
+</html>
